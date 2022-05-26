@@ -1,11 +1,14 @@
 print("Hello! Welcome to Coffee!")
 name = input("What is your name?\n")
 
-if name == "Ben":
-    print("You are not welcome here, Ben!! Get out!!")
-    exit()
-else:
-    print("Hello " + name + ", thank you for coming in today!\n\n")
+if name == "Ben" or name == "Patricia" or name == "Loki":
+    evil_status = input("Are you evil?\n")
+    good_deeds = int(input("How many good deeds have you done today?"))
+    if evil_status == "Yes" and good_deeds < 4:
+      print("You are not welcome here, " + name + "!! Get out!!")
+      exit()
+    else:
+      print("Hello " + name + ", thank you for coming in today!\n\n")
 
 menu = "Black coffee, Espresso, Latte, Cappucino, Frappucino"
 
