@@ -7,13 +7,28 @@ if name == "Ben":
 else:
     print("Hello " + name + ", thank you for coming in today!\n\n")
 
-menu = "Black coffee, Espresso, Latte, Cappucino"
+menu = "Black coffee, Espresso, Latte, Cappucino, Frappucino"
 
 print(name + ", what would you like?\n" + menu)
 
 order = input()
 price = 8
 quantity = input("How many coffees would you like?\n")
+
+if order == "Frappucino":
+    price = 13
+elif order == "Black coffee":
+    price = 3
+elif order == "Esspresso":
+    price = 5
+elif order == "Latte":
+    price = 9
+elif order == "Cappucino":
+    price = 10
+else:
+    print("Sorry, we don't have that here.")
+    price = 0
+
 total = price * int(quantity)
 
 print("Thank you. Your total is: " + str(total))
